@@ -1,0 +1,25 @@
+#square {
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    resize: both;
+    
+}
+#container {
+    height:240px; 
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px;
+    border-style: groove;
+    align-content: stretch;
+    aling-items: stretch;
+
+}
+.black {
+    background: black;
+    color: black;
+    background-color: black;
+
+}
