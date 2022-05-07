@@ -23,6 +23,7 @@ function repixel(){
     if(detailLevel <= 100){
         container.innerHTML = "";
         grid(detailLevel*detailLevel);
+        document.getElementById("square").style.width = 240/detailLevel + "px"
     } else{
         alert('Please enter a number not larger than 100')
     }

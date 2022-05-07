@@ -1,25 +1,18 @@
 #square {
     margin: 0;
     padding: 0;
-    width: 15px;
-    height: 15px;
-    resize: both;
-    
+    flex-basis: 15px;
 }
 #container {
     height:240px; 
     width: 240px;
-    display: flex;
-    flex-wrap: wrap;
     border: 10px;
     border-style: groove;
-    align-content: stretch;
-    aling-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    
 
 }
 .black {
     background: black;
-    color: black;
-    background-color: black;
-
 }
