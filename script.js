@@ -11,7 +11,7 @@ function grid(x){
     for(let i = 1; i<= x; i++){
         const square = document.createElement('div');
         square.addEventListener('mouseenter', color);
-        square.id = "square";
+        square.class = "square";
         container.append(square);
     }
 }
@@ -25,8 +25,9 @@ function repixel(){
     let detailLevel = prompt('Please enter amount of pixels per side up to 100',"16")
     if(detailLevel <= 100){
         container.innerHTML = "";
+        document.getElementById("container").style.gridTemplateColumns = 'repeat(boxSize(detailLevel), 1fr)';
+        document.getElementById("container").style.gridTemplateRows = 'repeat(boxSize(detailLevel), 1fr)';
         grid(detailLevel*detailLevel);
-        document.getElementsByid("#square").style.rowTemplateColumns = 'repeat(boxSize(detailLevel), 1fr)';
     } else{
         alert('Please enter a number not larger than 100')
     }
