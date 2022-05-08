@@ -2,17 +2,14 @@
     margin: 0;
     padding: 0;
     flex-basis: 15px;
-    flex-shrink: 3;
-    flex-grow: 8;
 }
 #container {
     height:240px; 
     width: 240px;
     border: 10px;
     border-style: groove;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
 }
 .black {
     background: black;

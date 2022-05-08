@@ -4,7 +4,6 @@ const reset = document.querySelector('#reset');
 pixels.addEventListener('click', repixel)
 reset.addEventListener('click', resetting)
 function color(){
-    console.log(this);
     this.classList.add('black'); 
 }
 
@@ -27,8 +26,7 @@ function repixel(){
     if(detailLevel <= 100){
         container.innerHTML = "";
         grid(detailLevel*detailLevel);
-        document.getElementsByClassName("square").style.width = `${boxSize(detailLevel)}`
-        document.getElementsByClassName("square").style.height = `${boxSize(detailLevel)}`
+        document.getElementsByid("#square").style.rowTemplateColumns = 'repeat(boxSize(detailLevel), 1fr)';
     } else{
         alert('Please enter a number not larger than 100')
     }
