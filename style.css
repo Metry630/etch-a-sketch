@@ -10,4 +10,20 @@
     border-style: groove;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    align-self: center;
+}
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+}
+.head {
+    align-self: center;
+    text-align: center;
 }
