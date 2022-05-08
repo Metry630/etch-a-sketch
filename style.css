@@ -1,16 +1,13 @@
 .square {
     margin: 0;
     padding: 0;
-    flex-basis: 15px;
+    flex-basis: 30px;
 }
 #container {
-    height:240px; 
-    width: 240px;
+    height: 480px; 
+    width: 480px;
     border: 10px;
     border-style: groove;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-}
-.black {
-    background: black;
 }
