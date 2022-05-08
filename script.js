@@ -18,12 +18,17 @@ function grid(x){
 }
 grid(256)
 
+function boxSize(x){
+    return Math.floor(240/x);
+}
+
 function repixel(){
     let detailLevel = prompt('Please enter amount of pixels per side up to 100',"16")
     if(detailLevel <= 100){
         container.innerHTML = "";
         grid(detailLevel*detailLevel);
-        document.getElementById("square").style.width = 240/detailLevel + "px"
+        document.getElementsByClassName("square").style.width = `${boxSize(detailLevel)}`
+        document.getElementsByClassName("square").style.height = `${boxSize(detailLevel)}`
     } else{
         alert('Please enter a number not larger than 100')
     }
