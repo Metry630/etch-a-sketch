@@ -21,20 +21,31 @@ function boxSize(x){
     return Math.floor(240/x);
 }
 
+function numColumn(x){
+    let sentence = "";
+    for(let i = 1; i<= x; i++){
+        sentence += " auto"
+    }
+    return sentence;
+}
+
 function repixel(){
     let detailLevel = prompt('Please enter amount of pixels per side up to 100',"16")
     if(detailLevel <= 100){
         container.innerHTML = "";
-        document.getElementById("container").style.gridTemplateColumns = 'repeat(boxSize(detailLevel), 1fr)';
-        document.getElementById("container").style.gridTemplateRows = 'repeat(boxSize(detailLevel), 1fr)';
+
+        document.getElementById("container").style.gridTemplateColumns = numColumn(detailLevel);
+        document.getElementById("container").style.gridTemplateRows = numColumn(detailLevel);
         grid(detailLevel*detailLevel);
     } else{
         alert('Please enter a number not larger than 100')
     }
-    
+
 }
 
 function resetting(){
-    container.innerHTML="";
+    container.innerHTML = ""
+    document.getElementById("container").style.gridTemplateRows = numColumn(16);
+    document.getElementById("container").style.gridTemplateColumns = numColumn(16);
     grid(256);
 }
